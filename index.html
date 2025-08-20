@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    .mobile-menu {
+      position: absolute;
+      top: -400px;
+      background-color: white;
+      width: 100%;
+      z-index: 99;
+    }
+    .mobile-menu.active {
+      top: 80px;
+    }
+  </style>
+
+  <body>
+    <nav class="flex items-center justify-between p-4 border-b">
+      <header class="flex items-center gap-1">
+        <div class="text-blue-600">
+          <svg
+            class="w-8 h-8 text-primary-blue"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg md:text-xl text-blue-600">
+            PT. Dinamika Indonesia Presisi
+          </h1>
+          <p class="-mt-1">Solusi Kontraktor Presisi</p>
+        </div>
+      </header>
+      <div class="items-center gap-6 hidden md:flex">
+        <ul class="flex gap-4">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+        <div class="font-bold bg-blue-600 text-white rounded-lg p-2">
+          <p>Get Started</p>
+        </div>
+      </div>
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        <svg
+          id="menu-icon"
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <svg
+          id="close-icon"
+          class="w-6 h-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </nav>
+    <div
+      id="mobile-menu"
+      class="mobile-menu transition-all duration-300 p-3 md:hidden border-t border-gray-200"
+    >
+      <div class="py-4 space-y-4">
+        <a
+          href="#hero"
+          class="block py-2 text-gray-700 hover:text-primary-blue transition-colors"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="block py-2 text-gray-700 hover:text-primary-blue transition-colors"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="block py-2 text-gray-700 hover:text-primary-blue transition-colors"
+          >Services</a
+        >
+        <a
+          href="#projects"
+          class="block py-2 text-gray-700 hover:text-primary-blue transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 text-gray-700 hover:text-primary-blue transition-colors"
+          >Contact</a
+        >
+        <div
+          class="text-center cursor-pointer transition-all duration-200 hover:bg-blue-800 font-bold bg-blue-600 text-white rounded-lg p-2"
+        >
+          <p>Get Started</p>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="hero-section justify-center items-center text-white bg-blue-600 min-h-screen py-[50px] px-5 md:flex md:gap-8"
+    >
+      <div class="">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-3xl md:text-6xl font-bold">
+            PT. Dinamika Indonesia Presisi
+          </h1>
+          <p class="text-lg text-gray-100 md:text-xl">
+            Solusi Kontraktor Presisi untuk Konstruksi Modern & Renovasi
+            Profesional
+          </p>
+          <p class="text-gray-200">
+            Dengan pengalaman lebih dari 12 tahun, kami menghadirkan layanan
+            konstruksi berkualitas tinggi dengan standar presisi dan kepuasan
+            99.5% dari klien kami.
+          </p>
+          <div class="flex flex-col gap-2 md:flex-row md:gap-2">
+            <a href=""
+              ><div
+                class="text-center md:w-[200px] cursor-pointer transition-all duration-200 hover:bg-blue-500 font-bold bg-blue-400 text-white rounded-lg p-2"
+              >
+                <p>Tentang Kami</p>
+              </div></a
+            >
+            <a href=""
+              ><div
+                class="mb-4 text-center md:w-[200px] cursor-pointer transition-all duration-200 bg-blue-500 font-bold hover:bg-blue-400 text-white rounded-lg p-2"
+              >
+                <p>Layanan Kami</p>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="flex justify-evenly items-center gap-3 mt-4">
+          <div class="text-center">
+            <h1 class="text-2xl font-bold text-blue-300">99.5%</h1>
+            <p>Kepuasan Klien</p>
+          </div>
+          <div class="text-center">
+            <h1 class="text-2xl font-bold text-blue-300">12+</h1>
+            <p>Tahun Pengalaman</p>
+          </div>
+          <div class="text-center">
+            <h1 class="text-2xl font-bold text-blue-300">100+</h1>
+            <p>Proyek Selesai</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <img
+          src="https://i.pinimg.com/736x/03/d7/70/03d7704dad409f8713915bcee69314b1.jpg"
+          width="900px"
+        />
+      </div>
+    </section>
+
+    <section class="about p-6 mt-5 md:flex md:gap-4">
+      <div>
+        <header>
+          <h1 class="font-bold text-4xl">
+            Tentang PT. Dinamika Indonesia Presisi
+          </h1>
+          <p class="mt-2 text-gray-600 text-lg mb-6">
+            Sebagai perusahaan jasa kontraktor terdepan di Indonesia, kami telah
+            membangun reputasi yang solid dalam memberikan solusi konstruksi
+            yang presisi dan berkualitas tinggi.
+          </p>
+        </header>
+        <p class="mt-4 text-gray-600">
+          Didirikan dengan visi menjadi partner terpercaya dalam setiap proyek
+          konstruksi, PT. Dinamika Indonesia Presisi mengombinasikan keahlian
+          teknis, inovasi teknologi, dan komitmen kualitas untuk menghadirkan
+          hasil yang melampaui ekspektasi klien.
+        </p>
+        <br />
+        <p class="-mt-3 text-gray-600">
+          Dengan tim profesional yang berpengalaman dan peralatan modern, kami
+          siap menangani berbagai jenis proyek mulai dari konstruksi gedung,
+          renovasi, hingga perencanaan arsitektur dengan standar internasional.
+        </p>
+
+        <div class="grid gap-5 mt-10 md:grid-cols-2">
+          <div class="flex gap-4">
+            <aside
+              class="flex bg-blue-100 w-fit h-fit p-3 rounded-lg text-blue-600"
+            >
+              <i data-feather="shield"></i>
+            </aside>
+            <div>
+              <h1 class="font-semibold">Keamanan Terjamin</h1>
+              <p class="text-sm text-gray-600">
+                Standar keselamatan kerja internasional dalam setiap proyek
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <aside
+              class="flex bg-blue-100 w-fit h-fit p-3 rounded-lg text-blue-600"
+            >
+              <i data-feather="award"></i>
+            </aside>
+            <div>
+              <h1 class="font-semibold">Kualitas Premium</h1>
+              <p class="text-sm text-gray-600">
+                Material berkualitas tinggi dan workmanship terbaik
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <aside
+              class="flex bg-blue-100 w-fit h-fit p-3 rounded-lg text-blue-600"
+            >
+              <i data-feather="users"></i>
+            </aside>
+            <div>
+              <h1 class="font-semibold">Tim Profesional</h1>
+              <p class="text-sm text-gray-600">
+                Tenaga ahli bersertifikat dengan pengalaman luas
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <aside
+              class="flex bg-blue-100 w-fit h-fit p-3 rounded-lg text-blue-600"
+            >
+              <i data-feather="clock"></i>
+            </aside>
+            <div>
+              <h1 class="font-semibold">Tepat Waktu</h1>
+              <p class="text-sm text-gray-600">
+                Komitmen penyelesaian proyek sesuai timeline yang disepakati
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 md:w-[1500px]">
+        <img
+          class="shadow-2xl rounded-2xl"
+          src="https://i.pinimg.com/736x/ae/87/b3/ae87b330f7b4f1e2040d96322f4cd773.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="portofolio mt-10 p-10">
+      <header class="text-center mb-[50px]">
+        <h1 class="mb-2 font-bold text-4xl transition-all duration-200">
+          Portfolio Proyek Terbaru
+        </h1>
+        <p class="text-gray-700 text-lg m-auto">
+          Lihat berbagai proyek konstruksi yang telah kami selesaikan dengan
+          hasil berkualitas tinggi dan kepuasan klien yang maksimal.
+        </p>
+      </header>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-2xl shadow-xl">
+          <div>
+            <img
+              src="https://i.pinimg.com/1200x/ba/90/73/ba9073cd9d21eea972da84807bef1b03.jpg"
+              width="100%"
+              alt=""
+            />
+          </div>
+          <div class="p-6">
+            <main>
+              <div>
+                <header>
+                  <h1 class="text-xl mb-4 font-bold">
+                    Gedung Perkantoran Modern
+                  </h1>
+                  <p class="text-gray-600 text-sm">
+                    Pembangunan gedung perkantoran 15 lantai dengan desain
+                    modern dan fasilitas lengkap.
+                  </p>
+                </header>
+                <div class="flex justify-between mt-8 p-0">
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="map-pin"></i>
+                    <p class="text-sm text-gray-600">Jakarta</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="calendar"></i>
+                    <p class="text-sm text-gray-600">2023</p>
+                  </div>
+                </div>
+                <hr class="mt-10 mb-6" />
+                <div class="flex gap-1 items-center">
+                  <p class="text-[15px] text-blue-600 font-semibold">
+                    Hubungi lebih lanjut
+                  </p>
+                  <i
+                    class="text-blue-600 font-semibold text-[15px]"
+                    data-feather="arrow-right"
+                  ></i>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+        <div class="rounded-2xl shadow-xl">
+          <div>
+            <img
+              src="https://i.pinimg.com/1200x/ba/90/73/ba9073cd9d21eea972da84807bef1b03.jpg"
+              width="100%"
+              alt=""
+            />
+          </div>
+          <div class="p-6">
+            <main>
+              <div>
+                <header>
+                  <h1 class="text-xl mb-4 font-bold">
+                    Gedung Perkantoran Modern
+                  </h1>
+                  <p class="text-gray-600 text-sm">
+                    Pembangunan gedung perkantoran 15 lantai dengan desain
+                    modern dan fasilitas lengkap.
+                  </p>
+                </header>
+                <div class="flex justify-between mt-8 p-0">
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="map-pin"></i>
+                    <p class="text-sm text-gray-600">Jakarta</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="calendar"></i>
+                    <p class="text-sm text-gray-600">2023</p>
+                  </div>
+                </div>
+                <hr class="mt-10 mb-6" />
+                <div class="flex gap-1 items-center">
+                  <p class="text-[15px] text-blue-600 font-semibold">
+                    Hubungi lebih lanjut
+                  </p>
+                  <i
+                    class="text-blue-600 font-semibold text-[15px]"
+                    data-feather="arrow-right"
+                  ></i>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+        <div class="rounded-2xl shadow-xl">
+          <div>
+            <img
+              src="https://i.pinimg.com/1200x/ba/90/73/ba9073cd9d21eea972da84807bef1b03.jpg"
+              width="100%"
+              alt=""
+            />
+          </div>
+          <div class="p-6">
+            <main>
+              <div>
+                <header>
+                  <h1 class="text-xl mb-4 font-bold">
+                    Gedung Perkantoran Modern
+                  </h1>
+                  <p class="text-gray-600 text-sm">
+                    Pembangunan gedung perkantoran 15 lantai dengan desain
+                    modern dan fasilitas lengkap.
+                  </p>
+                </header>
+                <div class="flex justify-between mt-8 p-0">
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="map-pin"></i>
+                    <p class="text-sm text-gray-600">Jakarta</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <i class="text-gray-600" data-feather="calendar"></i>
+                    <p class="text-sm text-gray-600">2023</p>
+                  </div>
+                </div>
+                <hr class="mt-10 mb-6" />
+                <div class="flex gap-1 items-center">
+                  <p class="text-[15px] text-blue-600 font-semibold">
+                    Hubungi lebih lanjut
+                  </p>
+                  <i
+                    class="text-blue-600 font-semibold text-[15px]"
+                    data-feather="arrow-right"
+                  ></i>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center mt-[60px]">
+        <p class="text-gray-600 font-[400] mb-4">
+          Tertarik dengan kualitas kerja kami? Mari diskusikan proyek Anda.
+        </p>
+        <a href=""
+          ><div
+            class="mb-4 text-center md:w-[200px] cursor-pointer transition-all duration-200 bg-blue-500 font-bold hover:bg-blue-400 text-white rounded-lg p-2"
+          >
+            <p>Layanan Kami</p>
+          </div></a
+        >
+      </div>
+    </section>
+
+    <section class="layanan">
+      <header>
+        <div class="top-container">
+          <div class="judul">
+            <h1 class="font-bold text-4xl">LAYANAN KONSTRUKSI PROFESIONAL</h1>
+          </div>
+          <div class="desc-fr">
+            <p>
+              kami menyediakan berbagai layanan konstruksi dan renovasi dengan
+              kualitas terjamin, didukung
+            </p>
+          </div>
+          <div class="desc-sc">
+            <p>oleh tim ahli dan perlatan modern untuk hasil yang optimal.</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="card-content-left">
+            <div class="card-icon-left">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="card-title-left">
+              <h2 class="text-xl font-bold">Konstruksi Gedung</h2>
+            </div>
+            <div class="card-desc-left">
+              <p>
+                Pembangunan gedung perkantoran, ruko,<br />dan bangunan
+                komersial dengan standar <br />
+                kualitas tinggi dan desain modern
+              </p>
+            </div>
+            <div class="card-list-left">
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>Desain Arsitektur</li>
+                <li>Struktur Bangunan</li>
+                <li>MEP System</li>
+                <li>Interior Design</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-content-mid">
+            <div class="card-icon-mid">
+              <i class="fa-solid fa-home"></i>
+            </div>
+            <div class="card-title-mid">
+              <h2 class="text-xl font-bold">Konstruksi Rumah</h2>
+            </div>
+            <div class="card-desc-mid">
+              <p>
+                Jasa pembangunan rumah tinggal dari <br />
+                konsep hingga serah teriman denga detail <br />
+                finishing yang sempurna
+              </p>
+            </div>
+            <div class="card-list-mid">
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>Rumah Minimalis</li>
+                <li>Rumah Mewah</li>
+                <li>Townhouse</li>
+                <li>Cluster</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-content-right">
+            <div class="card-icon-right">
+              <i class="fa-solid fa-tools"></i>
+            </div>
+            <div class="card-title-right">
+              <h2 class="text-xl font-bold">Renovasi Bangunan</h2>
+            </div>
+            <div class="card-desc-right">
+              <p>
+                layanan renovasi dan reodeling untuk <br />
+                memperbarui tampilan dan fungsi <br />
+                bangunan existing
+              </p>
+            </div>
+            <div class="card-list-right">
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>Renovasi Total</li>
+                <li>Renovasi Parsial</li>
+                <li>Upgrade MEP</li>
+                <li>Restorasi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <footer class="px-4 py-[80px] bg-blue-600 mt-[80px] grid md:grid-cols-3 gap-[100px] justify-between items-center">
+      <div>
+        <header class="flex items-center gap-1">
+          <div class="text-blue-400">
+            <svg
+              class="w-8 h-8 text-primary-blue"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-bold text-lg md:text-xl text-blue-200">
+              PT. Dinamika Indonesia Presisi
+            </h1>
+            <p class="-mt-1 text-blue-100">Solusi Kontraktor Presisi</p>
+          </div>
+        </header>
+        <p class="text-gray-300 mt-8 mb-8">
+          Perusahaan jasa kontraktor terpercaya dengan pengalaman lebih dari 12
+          tahun dalam memberikan solusi konstruksi berkualitas tinggi dan
+          presisi.
+        </p>
+        <div class="flex gap-2 items-center mt-2">
+          <i class="text-blue-400 w-4" data-feather="map-pin"></i>
+          <p class="text-sm text-blue-200">Jl. Sudirman No. 123, Jakarta Pusat 10110</p>
+        </div>
+        <div class="flex gap-2 items-center mt-2">
+          <i class="text-blue-400 w-5" data-feather="phone"></i>
+          <p class="text-sm text-blue-200">+62 21 1234 5678</p>
+        </div>
+        <div class="flex gap-2 items-center mt-2">
+          <i class="text-blue-400 w-5" data-feather="mail"></i>
+          <p class="text-sm text-blue-200">info@dinamikapresisi.co.id</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <header>
+          <h1 class="font-semibold text-blue-100 text-xl">Navigasi</h1>
+        </header>
+        <ul  class="text-blue-200 flex flex-col gap-2 mt-4 text-sm">
+          <li><a href="beranda">Beranda</a></li>
+          <li><a href="tentangkami">Tentang Kami</a></li>
+          <li><a href="layanan">Layanan</a></li>
+          <li><a href="portofolio">Portofolio</a></li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <header>
+          <h1 class="font-semibold text-blue-100 text-xl">Layanan</h1>
+        </header>
+        <ul  class="text-blue-200 flex flex-col gap-2 mt-4 text-sm">
+          <li>Konstruksi Gedung</a></li>
+          <li>Konstruksi Rumah</a></li>
+          <li>Renovasi Bangunan</a></li>
+          <li>Finishing Interior</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

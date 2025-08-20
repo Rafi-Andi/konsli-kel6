@@ -1,0 +1,104 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  background-color: var(--color1);
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.top-container {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.desc-fr,
+.desc-sc {
+  margin-top: 8px;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card-content-left,
+.card-content-mid,
+.card-content-right {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  background-color: white;
+}
+
+.card-content-left:hover,
+.card-content-mid:hover,
+.card-content-right:hover {
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.card-icon-left,
+.card-icon-mid,
+.card-icon-right {
+  color: rgb(0, 179, 249);
+  font-size: 25px;
+  background-color: rgba(0, 178, 249, 0.199);
+  padding: 10px 15px;
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-title-left,
+.card-title-mid,
+.card-title-right {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.card-desc-left,
+.card-desc-mid,
+.card-desc-right {
+  margin-bottom: 15px;
+  color: gray;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.card-list-left ul li,
+.card-list-mid ul li,
+.card-list-right ul li {
+  color: gray;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+/* ✅ Responsive Breakpoints */
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
