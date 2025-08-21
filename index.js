@@ -9,3 +9,5 @@ mobileMenuBtn.addEventListener('click', () => {
     closeIcon.classList.toggle('hidden')
     mobileMenu.classList.toggle('active')
 })
+
+// https://wa.me/628990827733
