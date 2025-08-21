@@ -282,7 +282,7 @@
       </div>
     </section>
 
-    <section class="portofolio mt-10 p-10">
+    <section class="portofolio mt-10 p-10" id="portofolio">
       <header class="text-center mb-[50px]">
         <h1 class="mb-2 font-bold text-4xl transition-all duration-200">
           Portfolio Proyek Terbaru
@@ -442,7 +442,7 @@
       </div>
     </section>
 
-    <section class="layanan"  id="layanan">
+    <section class="layanan" id="layanan">
       <header>
         <div class="top-container">
           <div class="judul">
@@ -534,7 +534,78 @@
       </main>
     </section>
 
-    <footer id="kontak" class="px-4 py-[80px] bg-blue-600 mt-[80px] grid md:grid-cols-3 gap-[100px] justify-between items-center">
+    <section class="mt-10" id="kontak">
+      <header class="text-center mb-[50px]">
+        <h1 class="mb-2 font-bold text-4xl transition-all duration-200">
+          Kontak kami
+        </h1>
+        <p class="text-gray-700 text-lg m-auto">
+          Untuk konsultasi lebih lanjut, silahkan kontak kami di bawah ini
+        </p>
+      </header>
+      <div class="grid grid-cols-1 md:grid-cols-2 p-8 gap-[3rem]">
+        <div class="bg-white shadow-xl p-10">
+          <header>
+            <h1 class="font-bold text-xl ">Dapatkan Konsultasi Gratis</h1>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="flex flex-col"> 
+                <label for="fullname" required class="text-sm font-[500]">Nama Lengkap*</label>
+                <input placeholder="Masukkan nama lengkap" class="text-sm  border-[1px] px-2 py-2 rounded-xl border-solid" type="text" name="fullname" id="fullname">
+              </div>
+              
+              <div class="flex flex-col"> 
+                <label for="telepon" required class="text-sm font-[500]">Nomor Telepon*</label>
+                <input placeholder="Masukkan nomer telepon" class="text-sm  border-[1px] px-2 py-2 rounded-xl border-solid" type="number" name="telepon" id="telepon">
+              </div>
+            </div>
+            <div class="flex flex-col mt-5"> 
+              <label for="email" required class="text-sm font-[500]">Email*</label>
+              <input placeholder="nama@mail.domain" class="text-sm  border-[1px] px-2 py-2 rounded-xl border-solid" type="text" name="email" id="email">
+            </div>
+            <div class="flex flex-col mt-5"> 
+              <label for="subjek" required class="text-sm font-[500]">Subjek*</label>
+              <input placeholder="Konsultasi bangunan" class="text-sm  border-[1px] px-2 py-2 rounded-xl border-solid" type="text" name="subjek" id="subjek">
+            </div>
+            <div class="flex flex-col mt-5"> 
+              <label for="pesan" required class="text-sm font-[500]">Pesan*</label>
+              <textarea class="text-sm h-[100px] border-[1px] px-2 py-2 rounded-xl border-solid text-gray-400" name="pesan" id="pesan">Masukkan pesan anda</textarea>
+            </div>
+          </header>
+
+        </div>
+        <div class="grid grid-cols-1 gap-4">
+          <div class="bg-white shadow-xl p-10 rounded-lg flex gap-4">
+            <div  class="bg-blue-100 text-blue-700 w-fit h-fit p-3 rounded-lg">
+              <i data-feather="map-pin"></i>
+            </div>
+            <div>
+              <h1 class="font-semibold">Alamat Kantor</h1>
+              <p class="text-gray-500">Jl. Sudirman No. 123, Jakarta Pusat 10110 DKI Jakarta, Indonesia</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-xl p-10 rounded-lg flex gap-4">
+            <div  class="bg-blue-100 text-blue-700 w-fit h-fit p-3 rounded-lg">
+              <i data-feather="phone"></i>
+            </div>
+            <div>
+              <h1 class="font-semibold">Telepon</h1>
+              <p class="text-gray-500">+62 899-0827-733 (Savri)</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-xl p-10 rounded-lg flex gap-4">
+            <div  class="bg-blue-100 text-blue-700 w-fit h-fit p-3 rounded-lg">
+              <i data-feather="mail"></i>
+            </div>
+            <div>
+              <h1 class="font-semibold">Email</h1>
+              <p class="text-gray-500 w-fit">konsultasi@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="px-4 py-[80px] bg-blue-600 mt-[80px] grid md:grid-cols-3 gap-[100px] justify-between items-center">
       <div>
         <header class="flex items-center gap-1">
           <div class="text-blue-400">
@@ -570,7 +641,7 @@
         </div>
         <div class="flex gap-2 items-center mt-2">
           <i class="text-blue-400 w-5" data-feather="phone"></i>
-          <p class="text-sm text-blue-200">+62 21 1234 5678</p>
+          <p class="text-sm text-blue-200">+62 899-0827-733 (Savri)</p>
         </div>
         <div class="flex gap-2 items-center mt-2">
           <i class="text-blue-400 w-5" data-feather="mail"></i>
@@ -582,10 +653,11 @@
           <h1 class="font-semibold text-blue-100 text-xl">Navigasi</h1>
         </header>
         <ul  class="text-blue-200 flex flex-col gap-2 mt-4 text-sm">
-          <li><a href="beranda">Beranda</a></li>
-          <li><a href="tentangkami">Tentang Kami</a></li>
-          <li><a href="layanan">Layanan</a></li>
-          <li><a href="portofolio">Portofolio</a></li>
+          <li class="hover:text-blue-400 transition-all duration-200"><a href="#beranda" id="beranda">Beranda</a></li>
+          <li class="hover:text-blue-400 transition-all duration-200"><a href="#profile" id="profile">Profile</a></li>
+          <li class="hover:text-blue-400 transition-all duration-200"><a href="#layanan">Layanan</a></li>
+          <li class="hover:text-blue-400 transition-all duration-200"><a href="#portofolio">Portofolio</a></li>
+          <li class="hover:text-blue-400 transition-all duration-200"><a href="#kontak">Portofolio</a></li>
         </ul>
       </div>
       <div class="mt-4">
